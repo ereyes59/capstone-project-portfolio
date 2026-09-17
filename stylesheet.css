@@ -183,8 +183,8 @@
 
 /* REFACTORING EVIDENCE 
 
-Before: There was repeated spacing and color values that were going to be used in the stylesheet
-After: Custom properties were created in the :root selector to store the values for spacing and color, which were then used throughout the stylesheet to maintain consistency and make future changes easier.
+Before: There was repeated spacing and color values that were going to be used in the style sheet
+After: Custom properties were created in the :root selector to store the values for spacing and color, which were then used throughout the style sheet to maintain consistency and make future changes easier.
 
 Before: Component styles could require more specific selectors to override global styles, leading to increased specificity and potential conflicts.
 After: Cascade layer and simple class selectors were used to reduce specificity and make it easier to override styles when necessary.
@@ -197,5 +197,68 @@ After: Component specific properties such as card --card-padding and --card-bord
 
 /* ARCHITECTURE NOTES
 
-The stylesheet uses cascade layers in the order of reset, base, components, utilities, states, and overrides. This keeps the styles organized and allows for easier maintenance and overrides. Custom properties in :root stores reusable values for colors, spacing, and other design tokens, ensuring consistency across the site. Component-specific properties are scoped to their respective selectors to avoid conflicts and maintain modularity. Media queries are used for print styles to ensure a clean output when printing the page. Browser checks were performed at different screen sizes to ensure responsiveness and accessibility so far. The index.html used is from a previous assignment to simply to test the styles and ensure that they are working as expected. Hover, keyboard focus, and disabled states were also tested as well as a print check to ensure that the styles were applied correctly. 
-*/
+The style sheet uses cascade layers in the order of reset, base, components, utilities, states, and overrides. This keeps the styles organized and allows for easier maintenance and overrides. Custom properties in :root stores reusable values for colors, spacing, and other design tokens, ensuring consistency across the site. Component-specific properties are scoped to their respective selectors to avoid conflicts and maintain modularity. Media queries are used for print styles to ensure a clean output when printing the page. Browser checks were performed at different screen sizes to ensure responsiveness and accessibility so far. The index.html used is from a previous assignment to simply to test the styles and ensure that they are working as expected. Hover, keyboard focus, and disabled states were also tested as well as a print check to ensure that the styles were applied correctly. 
+
+
+
+/* Image Inventory 
+
+Image Number (File Name): Purpose | Source | License/Permission | Original Format | Current Format | Current Dimensions | Expected Display Size
+
+Image 1 (vanguard-home.png): Showcase the Vanguard website and homepage design | Original Work created by me for coursework | Original work | PNG | PNG | 1598 x 1257 px | 800 x 629 px
+Image 2 (vanguard-content.png): Showcase additional content and layout of the site | Original work created by me for coursework | Original work | PNG | PNG | 1596 x 1257px | 800 x 630px 
+Image 3 (field-and-feast-home.png): Showcase the Field and Feast and homepage layout | Original work created by me for coursework | Original Work | PNG | PNG | 872 × 1122 px | 800 × 1029 px
+Image 4 (field-and-feast-gallery.png): Showcase the gallery and visual presentation of the site | Original work created by me for coursework | Original Work | PNG | PNG | 873 × 1263 px | 800 × 1158 px
+Image 5 (path-to-success-home.png): Showcase the Path to Success website and homepage design | Original work created by me for coursework | Original Work | PNG | PNG | 486 × 1264 px | 486 × 1264 px
+Image 6 (path-to-success-content.png): Showcase additional content and page design | Original work created by me for coursework | Original Work | PNG | PNG | 483 × 1259 px | 483 × 1259 px
+Image 7 (mash-up-poster_mockup.png): Showcase the mashup poster in a realistic mockup presentation | Original work created by me for coursework | Original Work. Third-party characters/branding used as part of coursework | PNG | PNG | 4000 × 3000 px | 800 × 600 px
+
+
+
+/* Alt Text Plan 
+
+Image Number (File Name): Image type | Alt text Draft/alt treatment
+
+Image 1 (vanguard-home.png): Informative | "Screenshot of the Vanguard website homepage showing the Vanguard logo, navigation menu, hero section, and blue and red visual design."
+Image 2 (vanguard-content.png): Informative | "Screenshot of the Vanguard website showing the services and results sections with structured text, statistics, and a results table."
+Image 3 (field-and-feast-home.png): Informative | "Screenshot of the Field and Feast homepage featuring the brand logo, the navigation, and a food-focused visual design."
+Image 4 (field-and-feast-gallery.png): Informative | "Screenshot of the Field and Feast Gallery page showing a collection of food and event photography presented within the website design."
+Image 5 (path-to-success-home.png): Informative | "Screenshot of the Path to Success homepage showing the website navigation, colorful branding, and introductory content."
+Image 6 (path-to-success-content.png): Informative | "Screenshot of the Path to Success website showing additional content, text sections, and colorful visual elements."
+Image 7 (mash-up-poster_mockup.png): Complex | "Mockup of a graphic design poster combining Batman and The Devil Wears Prada themes with a dark background, large white typography, and gold accents combine the themes from both movies into single composition."
+
+
+
+/* Media
+
+No audio, video, animation, or embedded media currently planned. The main media assets will be screenshots of projects I have completed, which will be presented as static images. Captions will be provided where additional context may be needed. ALt text will be provided for accessibility as well. 
+
+
+
+/* Typography
+
+Font | Source | License | Fallback | Weights/Styles Used | Loading Strategy
+
+Helvetica Neue | System Font | No font web license needed | Arial, sans-serif | Regular, bold, default body text | No external font file needs to load
+Georgia | System Font | No font web license needed | Serif | Regular, bold, default heading text | No external font file needs to load
+
+
+
+/* Optimization Risk
+
+Asset 1 (mash-up-poster_mockup.png): Performance risk because the image is large at approximately 21 MB, making it larger than the other portfolio images causing the page to potentially load slower. To optimize this, resize the image to an appropriate display size and convert it to a more optimized format such as WebP or screenshot the mockup similar to the other projects and resize accordingly.
+
+Asset 2 (vanguard-home.png): Performance risk because this image and other similar image sizes are approximately at nearly 2 MB. It may take longer to load for those on slower connection speeds. To optimize this, compress and resize the image while maintaining the resolution to ensure no quality is lost.
+
+Asset 3 (field-and-feast-gallery.png): Performance/layout risk because the image is around 1.07 MB, and is more of a narrow image as it is displaying the site when using a narrow display. It could affect loading and page performance. To optimize this, compress the image and use responsive sizing so it display appropriately across different screen sizes.
+
+
+
+/* Evidence Plan
+
+For file size, I will check the file size of each image before adding it to the final website. Larger files will be compressed or converted to a more efficient format.
+For dimensions, I will check the pixel dimensions of each image and compare them to the expected display size to make sure images are being displayed properly.
+For responsive behavior, I will test my portfolio at different screen sizes including a narrow, medium, and large size to make sure images and layouts resize correctly and as intended without causing any overflow or horizontal scrolling.
+For loading, I will use the browser's developer tools and Lighthouse to check image loading and page performance. 
+For accessibility, I will check that the informative images have useful alt text, and test the navigation with a keyboard and use an accessibility checker such as Lighthouse to identify any accessibility issues.
+/*
