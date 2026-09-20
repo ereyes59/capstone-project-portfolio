@@ -345,7 +345,7 @@ For accessibility, I will check that the informative images have useful alt text
 
 
 /* Created  9/20/26 
-/* ASSET INVENTORY
+/* 1. ASSET INVENTORY
 
 Asset | Type | Source
 
@@ -357,26 +357,26 @@ Asset | Type | Source
 6.path-to-success-content.png | Project screenshot | Original coursework	
 7.mash-up-poster__mockup.png | Design mockup | Original coursework using third-party Batman and The Devil Wears Prada imagery/branding	
 
-/* RESPONSIVE IMAGES
+/* 2. RESPONSIVE IMAGES
 
 The screenshots are way larger than the space they are expected to occupy on the page. Keeping them at the original sizes would cause unnecessary loading time. 
 I wil optimize the images by resizing them to a more suitable display size and converting larger PNG files to WebP where needed. Most of the png screenshots can be resized to around 800px wide because te portfolio layout uses a 1200px max container and the images do not need to display at their original size.
 The mashup poster mockup is the biggest performance concern. The original dimensions and file size are really large, so reduction it to around 800px wide and using a compressed WebP version will help improve the performance of the page.
 If the final portfolio displays the images at different sizes across screen widths, the srcset and sizes can be used to provide appropriately sized versions.
 
-/* ART DIRECTION
+/* 3. ART DIRECTION
 
 The portfolio images are all screenshots of completed work of websites and graphic design projects I have done, so the full composition is important to understand the work. I don not plan to crop the images differently for mobile and desktop because doing so would remove important parts of the project. The same composition can be used across responsive layouts while allowing the image itself to scale down to fit the available space. The portfolio wil use a responsive image width like max-width: 100% to prevent any type of overflow.  
 
-/* Alt Text and Alternatives
+/* 4. Alt Text and Alternatives
 
 The portfolio images are all informative because they show examples of my previous work. Each screenshot will have alt text that describes what is shown as well. The alt text plan is listed above as well.
 
-/* SVG/MEDIA/EMBED ACCESSIBILITY 
+/* 5. SVG/MEDIA/EMBED ACCESSIBILITY 
 
 My portfolio does not require any type of embedded media. The media assets used in my portfolio mainly consists of static screenshots of my previous projects. As for image accessibility, project titles, descriptions, and any other information would be provided through actual HTML code.
 
-/* TYPOGRAPHY SYSTEM
+/* 6. TYPOGRAPHY SYSTEM
 
 The portfolio uses Helvetica Neue for the body text and Georgia
 for the headings. The base font size is 16px, and the headings
@@ -385,7 +385,7 @@ also have a max width of 65ch so the lines do not get too long
 on larger screens. The line height helps keep the text easier
 to read.
 
-/* FONT LOADING
+/* 7. FONT LOADING
 
 The portfolio uses system fonts instead of loading custom web
 fonts. Helvetica Neue uses Arial as a fallback, and Georgia uses
@@ -393,7 +393,7 @@ a serif fallback if it is not available. Since the fonts are
 already available as system fonts, there are no external font
 files that need to load.
 
-/* LAYOUT STABILITY
+/* 8. LAYOUT STABILITY
 
 The images use max-width: 100% and height: auto so they can
 resize with the page without going outside of their containers.
@@ -402,7 +402,7 @@ when the images are added. This will help the browser know how
 much space to reserve for the images and help prevent the layout
 from moving while the images load.
 
-/* TESTING EVIDENCE
+/* 9. TESTING EVIDENCE
 
 I tested the portfolio at narrow, medium, and large screen sizes
 to make sure the layout responds correctly. I also tested the
