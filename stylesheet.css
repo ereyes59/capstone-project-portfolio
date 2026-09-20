@@ -21,7 +21,11 @@
     /* Font */
     --font-body: 'Helvetica Neue', Arial, sans-serif;
     --font-heading: 'Georgia', serif;
-    --font-size-base: 16px;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.75rem;
+    --font-size-xxl: 2.25rem;
 
     /* Spacing */
     --spacing-xs: 8px;
@@ -37,6 +41,42 @@
 
     /* Focus styles */
     --focus: 3px solid var(--color-secondary);
+
+    body {
+        font-family: var(--font-body);
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+        color: var(--color-text);
+        background-color: var(--color-background);
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: var(--font-size-xl);
+    }
+
+@media (min-width: 800px) {
+    h1 {
+    font-size: var(--font-size-xxl);
+    }
+}
+
+    h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    p {
+        max-width: 65ch;
+    }
 }
 }
 
@@ -60,9 +100,22 @@
 
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
+    
+@media (min-width: 800px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+    
 }
 
 
@@ -108,6 +161,34 @@
         padding: var(--spacing-lg);
         background-color: var(--color-primary);
         color: var(--color-background);
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-figure {
+        margin: 0;
+    }
+
+    .project-figure figcaption {
+        margin-top: var(--spacing-xs);
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: var(--color-text);
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius-sm);
     }
 }
 
@@ -261,4 +342,82 @@ For dimensions, I will check the pixel dimensions of each image and compare them
 For responsive behavior, I will test my portfolio at different screen sizes including a narrow, medium, and large size to make sure images and layouts resize correctly and as intended without causing any overflow or horizontal scrolling.
 For loading, I will use the browser's developer tools and Lighthouse to check image loading and page performance. 
 For accessibility, I will check that the informative images have useful alt text, and test the navigation with a keyboard and use an accessibility checker such as Lighthouse to identify any accessibility issues.
+
+
+/* Created  9/20/26 
+/* ASSET INVENTORY
+
+Asset | Type | Source
+
+1. vanguard-home.png | Project Screenshot | Original coursework
+2,vanguard-content.png | Project screenshot	| Original coursework	
+3.field-and-feast-home.png | Project screenshot	| Original coursework	
+4.field-and-feast-gallery.png | Project screenshot | Original coursework	
+5.path-to-success-home.png | Project screenshot | Original coursework
+6.path-to-success-content.png | Project screenshot | Original coursework	
+7.mash-up-poster__mockup.png | Design mockup | Original coursework using third-party Batman and The Devil Wears Prada imagery/branding	
+
+/* RESPONSIVE IMAGES
+
+The screenshots are way larger than the space they are expected to occupy on the page. Keeping them at the original sizes would cause unnecessary loading time. 
+I wil optimize the images by resizing them to a more suitable display size and converting larger PNG files to WebP where needed. Most of the png screenshots can be resized to around 800px wide because te portfolio layout uses a 1200px max container and the images do not need to display at their original size.
+The mashup poster mockup is the biggest performance concern. The original dimensions and file size are really large, so reduction it to around 800px wide and using a compressed WebP version will help improve the performance of the page.
+If the final portfolio displays the images at different sizes across screen widths, the srcset and sizes can be used to provide appropriately sized versions.
+
+/* ART DIRECTION
+
+The portfolio images are all screenshots of completed work of websites and graphic design projects I have done, so the full composition is important to understand the work. I don not plan to crop the images differently for mobile and desktop because doing so would remove important parts of the project. The same composition can be used across responsive layouts while allowing the image itself to scale down to fit the available space. The portfolio wil use a responsive image width like max-width: 100% to prevent any type of overflow.  
+
+/* Alt Text and Alternatives
+
+The portfolio images are all informative because they show examples of my previous work. Each screenshot will have alt text that describes what is shown as well. The alt text plan is listed above as well.
+
+/* SVG/MEDIA/EMBED ACCESSIBILITY 
+
+My portfolio does not require any type of embedded media. The media assets used in my portfolio mainly consists of static screenshots of my previous projects. As for image accessibility, project titles, descriptions, and any other information would be provided through actual HTML code.
+
+/* TYPOGRAPHY SYSTEM
+
+The portfolio uses Helvetica Neue for the body text and Georgia
+for the headings. The base font size is 16px, and the headings
+use larger font sizes to create a clear hierarchy. Paragraphs
+also have a max width of 65ch so the lines do not get too long
+on larger screens. The line height helps keep the text easier
+to read.
+
+/* FONT LOADING
+
+The portfolio uses system fonts instead of loading custom web
+fonts. Helvetica Neue uses Arial as a fallback, and Georgia uses
+a serif fallback if it is not available. Since the fonts are
+already available as system fonts, there are no external font
+files that need to load.
+
+/* LAYOUT STABILITY
+
+The images use max-width: 100% and height: auto so they can
+resize with the page without going outside of their containers.
+The image width and height will also be included in the HTML
+when the images are added. This will help the browser know how
+much space to reserve for the images and help prevent the layout
+from moving while the images load.
+
+/* TESTING EVIDENCE
+
+I tested the portfolio at narrow, medium, and large screen sizes
+to make sure the layout responds correctly. I also tested the
+page at 200% zoom to make sure the content stays readable and
+usable.
+
+I checked the image dimensions and file sizes and made sure the
+images stay within their containers without causing horizontal
+scrolling. I also checked the alt text for the portfolio images
+and made sure the images have useful descriptions.
+
+I used browser developer tools and Lighthouse to check the
+portfolio's performance and accessibility. The portfolio was
+also checked on different screen sizes to make sure the layout
+and images work properly. After testing, everything is working
+as expected.
+
 /*
