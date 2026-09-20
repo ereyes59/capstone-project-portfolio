@@ -360,7 +360,7 @@ Asset | Type | Source
 /* 2. RESPONSIVE IMAGES
 
 The screenshots are way larger than the space they are expected to occupy on the page. Keeping them at the original sizes would cause unnecessary loading time. 
-I wil optimize the images by resizing them to a more suitable display size and converting larger PNG files to WebP where needed. Most of the png screenshots can be resized to around 800px wide because te portfolio layout uses a 1200px max container and the images do not need to display at their original size.
+I will optimize the images by resizing them to a more suitable display size and converting larger PNG files to WebP where needed. Most of the png screenshots can be resized to around 800px wide because the portfolio layout uses a 1200px max container and the images do not need to display at their original size.
 The mashup poster mockup is the biggest performance concern. The original dimensions and file size are really large, so reduction it to around 800px wide and using a compressed WebP version will help improve the performance of the page.
 If the final portfolio displays the images at different sizes across screen widths, the srcset and sizes can be used to provide appropriately sized versions.
 
