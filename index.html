@@ -1,102 +1,147 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Desert Design Week</title>
-  <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Erwin Reyes Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="site-logo" href="#">Erwin Reyes' Portfolio</a>
-    <nav aria-label="Main navigation">
-      <ul class="nav-list">
-        <li><a aria-current="page" href="#">Home</a></li>
-        <li><a href="#">Schedule</a></li>
-        <li><a href="#">Speakers</a></li>
-        <li><a href="#">Attend</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-      <section class="container">
-          <div class="intro">
-              <p>About Me</p>
-              <h1>About Erwin</h1>
-              <p>About section coming soon. This space will be used to introduce myself, my background, interests, and goals.</p>
-          </div>
-      </section>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="site-logo" href="index.html">
+                Erwin Reyes
+                <span> Portfolio</span>
+            </a>
 
-      <section class="container">
-          <div class="intro">
-              <p>My Work</p>
-              <h2>Selected Projects</h2>
-              <p>Here are a few examples of projects I have worked on throughout my coursework.</p>
-          </div>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="project.html">Projects</a>
+                <a href="about.html">About</a>
+            </nav>
 
-          <div class="projects-grid two-column">
-              <figure class="project-figure">
-                  <img
-                      class="project-image"
-                      src="assets/images/vanguard-home.png"
-                      alt="Screenshot of the Vanguard website homepage showing the Vanguard logo, navigation menu, hero section, and blue and red visual design."
-                      width="800"
-                      height="629"
-                  >
-                  <figcaption>Vanguard responsive website project.</figcaption>
-              </figure>
+        </div>
+    </header>
 
-              <figure class="project-figure">
-                  <img
-                      class="project-image"
-                      src="assets/images/field-and-feast-home.png"
-                      alt="Screenshot of the Field and Feast homepage featuring the brand logo, navigation, and food-focused visual design."
-                      width="800"
-                      height="1029"
-                  >
-                  <figcaption>Field and Feast website project.</figcaption>
-              </figure>
-          </div>
-      </section>
+    <main id="main-content" tabindex="-1">
+        <section class="container">
+            <div class="intro">
+                <p>About Me</p>
+                <h1>About Erwin</h1>
+                <p>About section coming soon. This space will be used to introduce myself, my background, interests, and goals.</p>
+            </div>
+        </section>
 
-      <section class="container">
-          <div class="intro">
-              <p>Get in Touch</p>
-              <h2>Let's Connect</h2>
-              <p>Have a question, want to learn more about my work, or interested in working together? Send me a message using the form below.</p>
-          </div>
+        <section class="container">
+            <div class="intro">
+                <p>My Work</p>
+                <h2>Selected Projects</h2>
+                <p>Here are a few examples of projects I have worked on throughout my coursework.</p>
+            </div>
 
-          <form class="contact-form flow" action="mailto:erwinreyes61@gmail.com" method="post" enctype="text/plain">
-              <div class="flow">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" autocomplete="name" required>
-              </div>
+            <div class="projects-grid two-column">
+                <figure class="project-figure">
+                    <img
+                        class="project-image"
+                        src="assets/images/vanguard-home.png"
+                        alt="Screenshot of the Vanguard website homepage showing the Vanguard logo, navigation menu, hero section, and blue and red visual design."
+                        width="800"
+                        height="629"
+                        >
+                    <figcaption>Vanguard responsive website project.</figcaption>
+                </figure>
 
-              <div class="flow">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" autocomplete="email" required>
-              </div>
+                <figure class="project-figure">
+                    <img
+                        class="project-image"
+                        src="assets/images/field-and-feast-home.png"
+                        alt="Screenshot of the Field and Feast homepage featuring the brand logo, navigation, and food-focused visual design."
+                        width="800"
+                        height="1029"
+                    > 
+                    <figcaption>Field and Feast website project.</figcaption>
+                </figure>
+            </div>
+        </section>
 
-              <div class="flow">
-                  <label for="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" required>
-              </div>
+        <section class="container">
+            <div class="intro">
+                <p>Get in Touch</p>
+                <h2>Let's Connect</h2>
+                <p>Have a question, want to learn more about my work, or interested in working together? Send me a message using the form below.</p>
+            </div>
 
-              <div class="flow">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="7" required></textarea>
-              </div>
+            <form 
+                class="contact-form flow" 
+                action="mailto:erwinreyes61@gmail.com" 
+                method="post" 
+                enctype="text/plain"
+                aria-describedby="form-instructions"
+                >
+                <p id="form-instructions" class="form-note">
+                    All fields are required. Enter a valid email address in the Email field.
+                </p>
 
-              <button class="button" type="submit">Send Message</button>
-          </form>
+                <div class="flow">
+                    <label for="name">Name (required)</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        minlength="2"
+                        required
+                    >
+                </div>
 
-          <p>Prefer to email directly? <a href="mailto:erwinreyes61@gmail.com">Send me an email</a></p>
-      </section>
-  </main>
+                <div class="flow">
+                    <label for="email">Email (required)</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
 
-  <footer class="site-footer">
-    <p>Desert Design Week is a sample practice site for CSS architecture work.</p>
-  </footer>
+                <div class="flow">
+                    <label for="subject">Subject (required)</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        minlength="3"
+                        required
+                    >
+                </div>
+
+                <div class="flow">
+                    <label for="message">Message (required)</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="7"
+                        minlength="10"
+                        required
+                    ></textarea>
+                </div>
+
+                <button class="button" type="submit">
+                    Send Message
+                </button>
+
+            </form>
+            
+            <p>Prefer to email directly? <a href="mailto:erwinreyes61@gmail.com">Send me an email</a></p>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <p>&copy; 2026 Erwin Reyes. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

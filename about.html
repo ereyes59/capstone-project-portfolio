@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About | Erwin Reyes</title>
+    <title>About | Erwin Reyes Portfolio</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -18,7 +18,7 @@
 
             <nav class="site-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
+                <a href="project.html">Projects</a>
                 <a href="about.html" aria-current="page">About</a>
             </nav>
 
@@ -26,15 +26,14 @@
     </header>
 
 
-    <main>
+    <main id="main-content" tabindex="-1">
+
         <!--ABOUT SECTION (PLACEHOLDER)-->
         <section class="container">
             <div class="intro">
                 <p>About Me</p>
-
                 <h1>About Erwin</h1>
                 <p>About section coming soon. This space will be used to introduce myself, my background, interests, and goals.</p>
-
             </div>
         </section>
 
@@ -42,43 +41,81 @@
         <section class="container">
             <div class="intro">
                 <p>Get in Touch</p>
-
                 <h2>Let's Connect</h2>
-
                 <p>Have a question, want to learn more about my work, or interested in working together? Send me a message using the form below.</p>
-
             </div>
 
-            <form class="contact-form flow" action="mailto:erwinreyes61@gmail.com" method="post" enctype="text/plain">
+            <form 
+                class="contact-form flow" 
+                action="mailto:erwinreyes61@gmail.com" 
+                method="post" 
+                enctype="text/plain"
+                aria-describedby="form-instructions"
+            >
 
-                <p>All fields are required.</p>
+                <p id="form-instructions" class="form-note">
+                    All fields are required. Enter a valid email address in the Email field.
+                </p>
 
                 <div class="flow">
-                    <label for="name">Name (required)</label>
-                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <label for="name">
+                        Name (required)
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        minlength="2"
+                        required
+                    >
                 </div>
 
                 <div class="flow">
-                    <label for="email">Email (required)</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <label for="email">
+                        Email (required)
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
                 </div>
 
                 <div class="flow">
-                    <label for="subject">Subject (required)</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <label for="subject">
+                        Subject (required)
+                    </label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        minlength="3"
+                        required
+                    >
                 </div>
 
                 <div class="flow">
-                    <label for="message">Message (required)</label>
-                    <textarea id="message" name="message" rows="7" required></textarea>
+                    <label for="message">
+                        Message (required)
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="7"
+                        minlength="10"
+                        required
+                    ></textarea>
                 </div>
 
+                <button class="button" type="submit">
+                    Send Message
+                </button>
 
-                <button class="button" type="submit">Send Message</button>
             </form>
-
         </section>
-
     </main>
 
     <footer class="site-footer">
